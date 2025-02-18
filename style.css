@@ -1,1 +1,202 @@
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Sniglet:wght@400;800&display=swap');
+
+:root {
+    --primary: #124773;
+    --secondary: #d62c39;
+    --text-color: #ffffff;
+    --text-secondary: #fff62c;
+    --text-tertiary: #d62c39;
+}
+
+/* reset básico */
+* {
+    font-family: "Sniglet", serif;
+    margin: 0px;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100vw;
+    color: var(--text-color);
+}
+
+header {
+    width: 100%;
+    background-color: #072C4B;
+    text-align: center;
+    padding: 20px;
+}
+
+header img {
+    width: 250px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: var(--text-tertiary);
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 90%;
+}
+.conteudo{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.principal{
+    width: 90%;
+    background-color: #17406d;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.autor {
+    width: 95%;
+    background-color: var(--secondary);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.capitulo{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.capitulo h3{
+    align-self: flex-start;
+}
+.personagens{
+    width: 95%;
+    background-color: #17406d;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.imagem {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    border-radius: 10px;
+
+}
+.sujeira{
+    width: 50%;
+}
+.sujeira h2{
+    margin-bottom: 30px;
+}
+.mauricio{
+    width: 40%;
+}
+h2 {
+    color: var(--text-secondary);
+    text-align: center;
+    margin-top: 10px;
+}
+
+h3 {
+    color: var(--text-tertiary);
+    text-align: center;
+    margin-top: 10px;
+} 
+
+p {
+    text-align: justify;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+/* Avaliações */
+.avaliacoes {
+    background-color: #09203d;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: start;
+    width: 250px;
+    float: right;
+}
+
+.avaliacoes h2 {
+    color: yellow;
+}
+
+.avaliacoes img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.avaliacoes h4 {
+    color: yellow;
+    margin-top: 5px;
+}
+
+/* Personagens */
+.character {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.character img {
+    width: 150px;
+    border-radius: 10px;
+}
+
+.character p {
+    width: 70%;
+}
+
+/* Destaque do Capítulo */
+.star {
+    text-align: center;
+    color: yellow;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #072C4B;
+}
+footer p{
+    text-align: center;
+    font-size: 0.8em;
+}
+span{
+    font-weight: bolder;
+}
