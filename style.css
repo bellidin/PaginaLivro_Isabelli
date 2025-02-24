@@ -11,7 +11,7 @@
 /* reset básico */
 * {
     font-family: "Sniglet", serif;
-    margin: 0px;
+    margin: 0;
     padding: 0;
     list-style: none;
     box-sizing: border-box;
@@ -20,10 +20,11 @@
 body {
     background-color: var(--primary);
     display: flex;
-    align-items: center;
     flex-direction: column;
-    max-width: 100vw;
+    min-height: 100vh;
+    width: 100%;
     color: var(--text-color);
+    overflow-x: hidden;
 }
 
 header {
@@ -31,6 +32,8 @@ header {
     background-color: #072C4B;
     text-align: center;
     padding: 20px;
+    z-index: 2;
+    position: relative;
 }
 
 header img {
@@ -50,48 +53,50 @@ nav a {
 
 .container {
     display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: flex-start;
-    width: 90%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 10px;
+    position: relative; /* Ajustado para garantir que o conteúdo apareça por cima da imagem */
+    z-index: 1;
 }
-.conteudo{
+
+.conteudo {
     width: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+    z-index: 1;
 }
-.principal{
-    width: 90%;
-    background-color: #17406d;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
+
 .autor {
-    width: 95%;
+    width: 100%;
     background-color: var(--secondary);
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    margin-left: 260px;
+    margin-top: -700px;
+    padding-bottom: 200px;
 }
-.capitulo{
-    width: 90%;
+
+.capitulo {
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
-.capitulo h3{
+
+.capitulo h3 {
     align-self: flex-start;
 }
-.personagens{
-    width: 95%;
+
+.personagens {
+    width: 100%;
     background-color: #17406d;
     padding: 20px;
     margin-bottom: 20px;
@@ -103,21 +108,32 @@ nav a {
 }
 
 .imagem {
-    width: 100%;
-    max-width: 300px;
-    display: block;
-    border-radius: 10px;
-
-}
-.sujeira{
     width: 50%;
+    max-width: 300px;
+    /* display: block; */
+    border-radius: 10px;
+    margin-bottom: 20px;
+    
 }
-.sujeira h2{
+
+/* Estilo para a div sujeira e a imagem */
+.sujeira {
+    display: flex; /* Flexbox para os elementos dentro dela */
+    flex-direction: column; /* Os itens dentro da sujeira serão dispostos em coluna */
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+    width: 50%; /* Ocupa 50% do espaço restante */
+    margin-left: 400px;
+    margin-top: -300px;
+}
+.sujeira h2 {
     margin-bottom: 30px;
+    flex-grow: 1; /* Faz com que o título ocupe o espaço restante */
 }
-.mauricio{
-    width: 40%;
+
+.mauricio {
+    width: 100%;
 }
+
 h2 {
     color: var(--text-secondary);
     text-align: center;
@@ -128,7 +144,7 @@ h3 {
     color: var(--text-tertiary);
     text-align: center;
     margin-top: 10px;
-} 
+}
 
 p {
     text-align: justify;
@@ -192,11 +208,68 @@ footer {
     justify-content: center;
     flex-direction: column;
     background-color: #072C4B;
+    padding: 20px 0;
+    z-index: 2;
+    position: relative;
 }
-footer p{
+
+footer p {
     text-align: center;
     font-size: 0.8em;
 }
-span{
+
+span {
     font-weight: bolder;
+}
+
+#anterior, #proximo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: #eee9;
+    border: 1px solid #eee9;
+    color: #eee;
+    font-size: x-large;
+    font-family: monospace;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+   
+}
+
+#anterior {
+    left: 30px;
+}
+
+#proximo {
+    right: 30px;
+}
+
+
+.principal {
+    display: none;
+    width: 100%;
+    height: 100%;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    background-color: var(--primary);
+    overflow-y: auto;
+    /* z-index: -1; Coloca a imagem ao fundo */
+}
+
+.principal.ativo {
+    display: block;
+    height: 430px;
+}
+
+@keyframes mexer {
+    from {
+        top: 100%;
+        opacity: 0;
+    }
 }
