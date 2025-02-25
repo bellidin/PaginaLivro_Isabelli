@@ -124,6 +124,8 @@ nav a {
     width: 50%; /* Ocupa 50% do espaço restante */
     margin-left: 400px;
     margin-top: -300px;
+    align-items: center;
+    
 }
 .sujeira h2 {
     margin-bottom: 30px;
@@ -201,6 +203,13 @@ p {
     margin-bottom: 10px;
 }
 
+.casca{
+    width: auto;
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 70px;
+}
+
 footer {
     width: 100%;
     display: flex;
@@ -222,27 +231,9 @@ span {
     font-weight: bolder;
 }
 
-#anterior, #proximo {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    background-color: #eee9;
-    border: 1px solid #eee9;
-    color: #eee;
-    font-size: x-large;
-    font-family: monospace;
-    cursor: pointer;
-    z-index: 10;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-   
-}
 
 #anterior {
-    left: 30px;
+    left: 10px;
 }
 
 #proximo {
@@ -267,6 +258,29 @@ span {
     height: 430px;
 }
 
+#anterior,
+#proximo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color:#df54547d;
+    border: 1px solid #eee9;
+    color: #eee;
+    font-size: x-large;
+    font-family: monospace;
+    cursor: pointer;
+    z-index: 4;
+    border-radius: 50%;
+}
+
+.imagem{
+    margin-left: 60px;
+}
+.bolinha li{
+    list-style: disc;
+}
 @keyframes mexer {
     from {
         top: 100%;
